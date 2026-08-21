@@ -32,6 +32,8 @@ That's the origin of the mindset behind the projects below: quantitative modelin
 
 See [`/demo`](./demo) for a working version of the MIS Exposure Dashboard with synthetic sample data — no real data of any kind. Click "Load Demo Data" to populate it instantly.
 
+**Live version: https://fergusirvine55-gif.github.io/fergus-irvine-agentic-ai-portfolio/demo/**
+
 ## What this proves
 
 - Quantitative rigor isn't theoretical — ship-stability mathematics and multi-agent research pipelines are the same discipline applied to different domains.
