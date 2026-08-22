@@ -1,6 +1,8 @@
 # Fergus Irvine — AI Builder Portfolio
 
-Enterprise relationship manager in financial services who builds agentic AI systems daily, not occasionally. This repo is evidence, not a pitch: six working projects, their test suites, and what they actually proved.
+fergusirvine95@gmail.com · [LinkedIn](<LINKEDIN_URL>)
+
+Enterprise relationship manager in financial services who builds agentic AI systems daily, not occasionally. This repo is evidence, not a pitch: projects, their test suites, and what they actually proved.
 
 ## How I work with agentic AI
 
@@ -9,19 +11,12 @@ Enterprise relationship manager in financial services who builds agentic AI syst
 - **Evidence-before-assertion** — never claiming something works without running it. Every project below is backed by a test suite, and the numbers are the numbers whether or not they're flattering.
 - **Fail-closed, test-driven** — systems default to safe/off, not to "probably fine." Gates and checks block progression until an artifact explicitly proves the previous stage passed.
 
-## Where the mindset comes from
-
-BSc (Hons) Navigational Mathematics & Nautical Science, University of Plymouth — First Class Honours (76.51%), awarded the Head of School Medal for the highest First-Class GPA in the School of Science & Mathematics. Also HND in Navigation and Maritime Science and a Scottish Professional Diploma in Marine Management and Operations (City of Glasgow College).
-
-That degree is applied mathematics under real operational stakes, not an abstraction. The work included standing bridge navigational watches; chart, radar, and ECDIS (electronic navigation) work; building and applying ship-stability mathematics — quantitative models for real-time vessel stability; GMDSS radio communications; emergency response and crisis management; safety drill planning and crew training; and coordinating with port authorities and regulators across multiple jurisdictions while supervising teams of roughly 10–15 people. Certifications include STCW, HELM, ECDIS, GMDSS (GOC), and MCA Officer of the Watch (Deck), plus advanced fire-fighting and survival-craft proficiency.
-
-That's the origin of the mindset behind the projects below: quantitative modeling, safety-critical thinking, and operating under real consequences — now applied to software instead of ships.
-
 ## Projects
 
 | Project | What it is | Built with agentic AI | Scale / proof |
 |---|---|---|---|
-| **MIS Exposure Dashboard** | Single-file HTML tool for a global bank's collateral/exposure reporting workflow. Pure client-side (SheetJS/xlsx.js) — no backend, no data leaves the browser. | Yes | Handles ~100k-row / 70MB spreadsheet extracts, ~49s parse time; 123- and 37-assertion test modules. Live demo included, see below. |
+| **Client Book Dashboard & Deck Builder** | Single-file HTML tool for a global bank's collateral/exposure reporting workflow. Pure client-side (SheetJS/xlsx.js) — no backend, no data leaves the browser. | Yes | Handles ~100k-row / 70MB spreadsheet extracts, ~49s parse time; 123- and 37-assertion test modules. Live demo included, see below. |
+| **Merck & Co / Pandion Therapeutics Acquisition Model** | Full-scope M&A acquisition model reconstructing Merck's $1.85bn acquisition of Pandion Therapeutics (Feb 2021), built entirely from public filings (SEC, press releases). | Partial — core 17-tab workbook built manually; documentation, deal book and methodology guide AI-assisted. | 17-tab integrated model (rNPV, sum-of-parts, comps, precedents, football field, S&U, ASC 805 PPA, accretion/dilution, pro forma, synergies, sensitivity, scenarios, error checks) — 751 live formulas, zero errors. Includes a 6-slide IB-style deal book and a 5-page methodology guide — see [`/merck-pandion-ma-model`](./merck-pandion-ma-model). |
 | **Trade Advisor** | Personal multi-horizon trade decision-support web app, live on the web. | Yes | 18-agent research workflow (~1.2M tokens) over an 82-source registry; 17-check safety suite; live execution gated behind 8 independent checks, off by default. |
 | **equity-advisor** | Python CLI for equity research and recommendations. | Yes | 115 test functions across 31 files; coverage deliberately driven from 79% to 85% before the live-recommendation gate was allowed to activate. |
 | **algo-trader-v3** | Systematic trading bot as a five-stage gated pipeline: Hypothesis → Signal R&D → Build → Paper/Incubation → Live. | Yes | 129 tests, 28 architecture decision records; a hook-enforced rule blocks stage advancement unless the upstream gate artifact exists and reads PASS. Kill-scoreboard: 10+ candidate trading edges tested and killed before reaching capital. |
@@ -30,17 +25,17 @@ That's the origin of the mindset behind the projects below: quantitative modelin
 
 ## Live demo
 
-See [`/demo`](./demo) for a working version of the MIS Exposure Dashboard with synthetic sample data — no real data of any kind. Click "Load Demo Data" to populate it instantly.
+See [`/demo`](./demo) for a working version of the Client Book Dashboard & Deck Builder with synthetic sample data — no real data of any kind. Click "Load Demo Data" to populate it instantly.
 
 **Live version: https://fergusirvine55-gif.github.io/fergus-irvine-agentic-ai-portfolio/demo/**
 
+## Merck & Co / Pandion Therapeutics deal documents
+
+See [`/merck-pandion-ma-model`](./merck-pandion-ma-model) for the full package: [acquisition model workbook](./merck-pandion-ma-model/Merck_Pandion_Acquisition_Model.xlsx), [IB-style deal book](./merck-pandion-ma-model/Deal_Book.pptx), [methodology & user guide](./merck-pandion-ma-model/Methodology_and_User_Guide.pdf), and [license](./merck-pandion-ma-model/README_and_License.pdf). Reconstructed entirely from public information (SEC filings, press releases) — not investment advice, not affiliated with either company.
+
 ## What this proves
 
-- Quantitative rigor isn't theoretical — ship-stability mathematics and multi-agent research pipelines are the same discipline applied to different domains.
+- Quantitative rigor isn't theoretical — deal mathematics and multi-agent research pipelines are the same discipline applied to different domains.
 - Agentic AI fluency here means shipped, tested systems with governance built into the tooling (hooks, gates, kill-scoreboards) — not prompting as a party trick.
 - Honest reporting of negative results (Football Predictor) matters as much as positive ones — the value is in the process being trustworthy, not in every project "winning."
 - Enterprise relationship experience plus hands-on technical build capability is an uncommon combination: someone who can sit in front of a client and also ship the system underneath the conversation.
-
-## Contact
-
-fergusirvine55@gmail.com
