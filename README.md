@@ -2,7 +2,7 @@
 
 fergusirvine95@gmail.com · [LinkedIn](https://www.linkedin.com/in/fergus-irvine2203)
 
-Enterprise relationship manager in financial services who builds agentic AI systems daily, not occasionally. This repo is evidence, not a pitch: projects, their test suites, and what they actually proved.
+Enterprise Product and Account Management in financial services who builds agentic AI systems daily, not occasionally. This repo is evidence: projects, their test suites, and what they actually proved.
 
 ## How I work with agentic AI
 
