@@ -87,7 +87,7 @@
         {
           "name": "Client Book dashboards",
           "what": "Four single-file browser dashboards for a securities-finance client book: the master Client Book Dashboard & Deck Builder, its client-facing release, an EMEA aged-receivables tracker and a no-install exposure explorer. No server, no install, no network call. Every byte of parsing, charting, statistics and PDF or PPTX export runs inside the browser on a locked-down bank desktop.",
-          "proof": "Three releases deployed globally. Master build v41 scores a client against peers on 13 similarity factors, answers five analyst questions on an explore surface, runs paired t-tests, an F-test and Granger-style lead-lag tests with Benjamini-Hochberg adjustment, and exports decks into the user's own PPTX template. Every demo figure was recomputed in Python and matched in the browser to the cent.",
+          "proof": "Three releases deployed globally and in monthly use by dozens of relationship managers and client-service staff. Master build v41 scores a client against peers on 13 similarity factors, answers five analyst questions on an explore surface, runs paired t-tests, an F-test and Granger-style lead-lag tests with Benjamini-Hochberg adjustment, and exports decks into the user's own PPTX template. Every demo figure was recomputed in Python and matched in the browser to the cent.",
           "links": [
             {
               "label": "Project page",

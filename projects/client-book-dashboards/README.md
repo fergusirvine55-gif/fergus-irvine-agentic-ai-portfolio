@@ -1,6 +1,6 @@
 # Client Book dashboards
 
-Four single-file browser dashboards for a securities-finance client book at a global bank, plus the launch pad that holds them. One master build and three production releases deployed across the bank's global footprint. Everything in this folder runs on synthetic data: open any file, press Load Demo Data, and every institution, client, relationship manager and amount you see is fictional.
+Four single-file browser dashboards for a securities-finance client book at a global bank, plus the launch pad that holds them. One master build and three production releases deployed across the bank's global footprint, in monthly use by dozens of relationship managers and client-service staff over a book of hundreds of counterparties. Everything in this folder runs on synthetic data: open any file, press Load Demo Data, and every institution, client, relationship manager and amount you see is fictional.
 
 Nothing to install, no server, no network call, no admin rights. Each file opens on a locked-down bank desktop and does every byte of the work inside the browser: parsing the monthly extract, drawing the charts, running the statistics, and exporting the deck as PDF, as standalone PPTX, or as slides injected into the user's own PPTX template. That is why the family reaches any desk in the bank without an IT ticket.
 
@@ -58,11 +58,11 @@ Demo data: 1,100 rows over 24 months, built in.
 
 ## 2. Client-facing release, build 32
 
-The branded, client-ready release of the master, deployed globally, and the version counterparty decks come from. Same monitoring surface, same deck builder, with the inferential statistics held back for the client-facing cut. Two assertion modules (123 and 37 checks) back it. Sanitised, it is the live demo of this repo: open it, press Load Demo Data, tick some tiles, build a deck.
+The branded, client-ready release of the master, deployed globally, and the version counterparty decks come from. Dozens of relationship managers and client-service staff across every region use it to turn the monthly extract into the decks their clients see, in place of pivots and slides built by hand. Same monitoring surface, same deck builder, with the inferential statistics held back for the client-facing cut. Two assertion modules (123 and 37 checks) back it. Sanitised, it is the live demo of this repo: open it, press Load Demo Data, tick some tiles, build a deck.
 
 ## 3. EMEA Aged Receivables Dashboard, v1
 
-The same build pattern pointed at a second problem: aged receivables, which is billing and collections, across EMEA, with the monthly deck produced through the same export pipeline. Deployed globally. It shows aged balances by relationship manager and age bucket, unbilled revenue, a monthly deck with a history chart, a fee-schedule tracker slide that lists what is new, changed, carried and done each month, and a relationship-manager directory. Excel and PowerPoint export. Update data loads the month's source files through the dashboard's own parsers.
+The same build pattern pointed at a second problem: aged receivables, which is billing and collections, across EMEA, with the monthly deck produced through the same export pipeline. Deployed globally: finance, billing and collections staff and the relationship managers across EMEA use it every month to see what is overdue and what is unbilled, and to produce the receivables deck in one pass. It shows aged balances by relationship manager and age bucket, unbilled revenue, a monthly deck with a history chart, a fee-schedule tracker slide that lists what is new, changed, carried and done each month, and a relationship-manager directory. Excel and PowerPoint export. Update data loads the month's source files through the dashboard's own parsers.
 
 The demo was built from twelve synthetic source files in [data/aged-receivables](data/aged-receivables/): eight monthly unpaid-invoice extracts, a BI export, a scope workbook and two months of the fee-schedule tracker. They were run through the dashboard's own parsers and checked against an independent Python recomputation. The aged total, nine buckets, eight relationship managers, unbilled past due, eight history points and the tracker's new, changed, carried and done counts all match to the cent.
 
