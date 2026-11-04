@@ -1,0 +1,208 @@
+{
+  "version": "2",
+  "updated": "4 Nov 2026",
+  "site": "https://fergusirvine55-gif.github.io/fergus-irvine-agentic-ai-portfolio/",
+  "repo": "https://github.com/fergusirvine55-gif/fergus-irvine-agentic-ai-portfolio",
+  "person": {
+    "name": "Fergus Irvine",
+    "tagline": "Commercial operator in financial services. I build the systems underneath the conversation.",
+    "email": "fergusirvine95@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/fergus-irvine2203",
+    "intro": "I manage a client book at a global bank and I build the tools that book runs on. Before banking I spent seven years at sea as a navigation officer on cruise ships. Most days I build with Claude: dashboards a bank desktop can open with nothing installed, research systems that run fifty agents at once, and test suites that are allowed to say no. This repo is the evidence: the builds, the data they run on, and what each one proved."
+  },
+  "tracks": [
+    {
+      "title": "If you run a sales, account or partnerships team",
+      "lead": "Start with the client-book dashboards. They are what my own book runs on, and the deck builder is the tool I would bring to a first customer meeting. Then the Merck and Pandion model for how I read a deal.",
+      "links": [
+        {
+          "label": "Client Book dashboards",
+          "href": "projects/client-book-dashboards/"
+        },
+        {
+          "label": "Live demo",
+          "href": "https://fergusirvine55-gif.github.io/fergus-irvine-agentic-ai-portfolio/demo/"
+        },
+        {
+          "label": "Merck and Pandion model",
+          "href": "merck-pandion-ma-model/"
+        },
+        {
+          "label": "How I build with Claude",
+          "href": "how-i-build-with-claude.md"
+        }
+      ]
+    },
+    {
+      "title": "If you run solutions, deployment or forward-deployed work",
+      "lead": "Start with the master build and the setup page: how the statistics are implemented, how the exports are engineered around a locked-down desktop, and how I run agents, tests and verification.",
+      "links": [
+        {
+          "label": "Master build v41",
+          "href": "projects/client-book-dashboards/client-book-deck-builder-v41.html"
+        },
+        {
+          "label": "Launch pad, all four dashboards",
+          "href": "projects/client-book-dashboards/dashboards-hub.html"
+        },
+        {
+          "label": "How I build with Claude",
+          "href": "how-i-build-with-claude.md"
+        },
+        {
+          "label": "Trading pipeline gates",
+          "href": "#personal-quant-and-decision-systems"
+        }
+      ]
+    },
+    {
+      "title": "If you run product or strategy",
+      "lead": "Start with the benchmark and explore tabs, then the negative results: a prediction engine that proved there was no edge, and a trading pipeline that killed ten strategies before any reached capital.",
+      "links": [
+        {
+          "label": "Master build v41",
+          "href": "projects/client-book-dashboards/client-book-deck-builder-v41.html"
+        },
+        {
+          "label": "Football Predictor",
+          "href": "#personal-quant-and-decision-systems"
+        },
+        {
+          "label": "algo-trader-v3",
+          "href": "#personal-quant-and-decision-systems"
+        },
+        {
+          "label": "ETF Investment Simulator",
+          "href": "#personal-quant-and-decision-systems"
+        }
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "id": "fin",
+      "title": "Financial services and capital markets",
+      "blurb": "Built inside a global bank's securities-finance business, or from public filings.",
+      "projects": [
+        {
+          "name": "Client Book dashboards",
+          "what": "Four single-file browser dashboards for a securities-finance client book: the master Client Book Dashboard & Deck Builder, its client-facing release, an EMEA aged-receivables tracker and a no-install exposure explorer. No server, no install, no network call. Every byte of parsing, charting, statistics and PDF or PPTX export runs inside the browser on a locked-down bank desktop.",
+          "proof": "Three releases deployed globally and in monthly use by dozens of relationship managers and client-service staff. Master build v41 scores a client against peers on 13 similarity factors, answers five analyst questions on an explore surface, runs paired t-tests, an F-test and Granger-style lead-lag tests with Benjamini-Hochberg adjustment, and exports decks into the user's own PPTX template. Every demo figure was recomputed in Python and matched in the browser to the cent.",
+          "links": [
+            {
+              "label": "Project page",
+              "href": "projects/client-book-dashboards/"
+            },
+            {
+              "label": "Launch pad",
+              "href": "projects/client-book-dashboards/dashboards-hub.html"
+            },
+            {
+              "label": "Live demo",
+              "href": "https://fergusirvine55-gif.github.io/fergus-irvine-agentic-ai-portfolio/demo/"
+            },
+            {
+              "label": "Master build v41",
+              "href": "projects/client-book-dashboards/client-book-deck-builder-v41.html"
+            }
+          ]
+        },
+        {
+          "name": "Merck & Co / Pandion Therapeutics acquisition model",
+          "what": "A full M&A model of Merck's $1.85bn acquisition of Pandion Therapeutics, rebuilt from SEC filings and press releases: rNPV, sum of parts, comparables, precedents, football field, sources and uses, ASC 805 purchase price allocation, accretion and dilution, pro forma, synergies, sensitivities and scenarios.",
+          "proof": "17 integrated tabs, 751 live formulas, zero errors, plus a six-slide deal book and a five-page methodology guide. The workbook was built by hand; the documents were AI-assisted. Public information only, not investment advice, not affiliated with either company.",
+          "links": [
+            {
+              "label": "Folder",
+              "href": "merck-pandion-ma-model/"
+            },
+            {
+              "label": "Workbook",
+              "href": "merck-pandion-ma-model/Merck_Pandion_Acquisition_Model.xlsx"
+            },
+            {
+              "label": "Deal book",
+              "href": "merck-pandion-ma-model/Deal_Book.pptx"
+            },
+            {
+              "label": "Methodology guide",
+              "href": "merck-pandion-ma-model/Methodology_and_User_Guide.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quant",
+      "title": "Personal quant and decision systems",
+      "blurb": "Built for myself and for friends, with test suites and the results they produced, flattering or not. The code is being prepared for publication after a secrets scan; the figures are from the suites as they stand.",
+      "projects": [
+        {
+          "name": "Trade Advisor",
+          "what": "Personal multi-horizon trade decision-support web app: intraday to multi-year horizons, each with its own evidence base, a recommendation contract with entry, stop, target and invalidation, and outcome tracking that scores every call it makes.",
+          "proof": "18-agent research workflow (about 1.2M tokens) over an 82-source registry; a 17-check safety suite; live execution gated behind 8 independent checks and off by default. Paper first, fail closed.",
+          "links": [],
+          "note": "Code in preparation"
+        },
+        {
+          "name": "equity-advisor",
+          "what": "Python CLI for equity research and recommendations, reused as the valuation engine inside Trade Advisor.",
+          "proof": "115 test functions across 31 files; coverage pushed from 79% to 85% before the live-recommendation gate was allowed to switch on.",
+          "links": [],
+          "note": "Code in preparation"
+        },
+        {
+          "name": "algo-trader-v3",
+          "what": "Systematic trading pipeline in five gated stages: hypothesis, signal research, build, paper incubation, live.",
+          "proof": "129 tests and 28 architecture decision records. A hook blocks a stage from advancing unless the previous gate's artefact exists on disk and reads PASS. Kill scoreboard: more than ten candidate edges tested and killed before any reached capital.",
+          "links": [],
+          "note": "Code in preparation"
+        },
+        {
+          "name": "Football Predictor",
+          "what": "Match-outcome (win, draw, loss) prediction engine.",
+          "proof": "196 tests. Ranked probability score 0.2018 on unseen data across 15 leagues and 34,903 matches: a skilful model, and its own conclusion is that no exploitable edge exists against the betting market.",
+          "links": [],
+          "note": "Code in preparation"
+        },
+        {
+          "name": "ETF Investment Simulator",
+          "what": "Offline Monte Carlo investment simulator built for a friend, comparing 36 funds across UK brokers.",
+          "proof": "100,000 simulation paths in a browser Web Worker with no server, and warnings about survivorship and recency bias written into the assumptions page.",
+          "links": [],
+          "note": "Code in preparation"
+        }
+      ]
+    }
+  ],
+  "in_preparation": {
+    "title": "In preparation",
+    "blurb": "Sanitised versions of work from this autumn, each landing as its own page.",
+    "items": [
+      "AI for ship operators: a feasibility study from a 51-agent research run, with its method and sources.",
+      "A command-and-control AI layer for passenger ships: concept note and the gated method behind it.",
+      "Records-first prospecting: the method and scoring rubric behind a prospect pack built from public carrier records.",
+      "Enterprise account plan: a template drawn from a private-credit account plan, with the firm removed.",
+      "Meeting-prep workspace: question bank, flashcards, side-by-side documents and notes, demonstrated on a fictional company.",
+      "Target-account research pipeline: API ingest, a classifier, embedding-similarity tiers and a live dashboard, on synthetic data."
+    ]
+  },
+  "build": {
+    "title": "How I build with Claude",
+    "summary": [
+      "A Contabo VPS (12 vCPU, 47 GB RAM) runs headless Claude Code for agent fleets. The Mac stays master; cloud sessions take the overnight research.",
+      "A hook enforces a launch card before any agent run: three configurations, every model and effort level chosen fresh, usage share and finishing time stated. Nothing launches until I type go.",
+      "Finders write to disk, an independent verifier re-checks their claims, one judge decides. Briefs are files with an output schema.",
+      "Suites of 196, 129 and 115 tests; hook-enforced stage gates; a kill scoreboard; pre-registration and held-out controls on the models.",
+      "Single-file HTML tools for bank desktops, Python pipelines, React and Express on Render, artifacts with shared databases and per-user state.",
+      "One branch per task, draft PRs with a stated merge order, decision ids and version tags, HANDOVER and STATE files in every project."
+    ],
+    "href": "how-i-build-with-claude.md"
+  },
+  "proves": [
+    "Deal mathematics and multi-agent research pipelines are the same discipline: state the claim, build the test, report the number.",
+    "The agent work here is shipped systems with governance in the tooling: launch cards, hooks, gates, allow-lists and kill scoreboards.",
+    "Negative results get the same care as positive ones. The prediction engine that found no edge is the project I would show first.",
+    "I can sit in front of the client and also ship the system underneath the conversation."
+  ]
+}

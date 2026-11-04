@@ -1,41 +1,83 @@
-# Fergus Irvine — AI Builder Portfolio
+# Fergus Irvine
 
-fergusirvine95@gmail.com · [LinkedIn](https://www.linkedin.com/in/fergus-irvine2203)
+Commercial operator in financial services. I build the systems underneath the conversation.
 
-Enterprise Product and Account Management in financial services who builds agentic AI systems daily, not occasionally. This repo is evidence: projects, their test suites, and what they actually proved.
+fergusirvine95@gmail.com · [LinkedIn](https://www.linkedin.com/in/fergus-irvine2203) · [Site](https://fergusirvine55-gif.github.io/fergus-irvine-agentic-ai-portfolio/)
 
-## How I work with agentic AI
+I manage a client book at a global bank and I build the tools that book runs on. Before banking I spent seven years at sea as a navigation officer on cruise ships. Most days I build with Claude: dashboards a bank desktop can open with nothing installed, research systems that run fifty agents at once, and test suites that are allowed to say no. This repo is the evidence: the builds, the data they run on, and what each one proved.
 
-- **Multi-agent fan-out** — decomposing research, review, and validation work across parallel agents rather than running everything serially through one context.
-- **Falsification-first** — trying to disprove my own ideas before trusting them. A model or strategy earns confidence by surviving an attempt to kill it, not by sounding plausible.
-- **Evidence-before-assertion** — never claiming something works without running it. Every project below is backed by a test suite, and the numbers are the numbers whether or not they're flattering.
-- **Fail-closed, test-driven** — systems default to safe/off, not to "probably fine." Gates and checks block progression until an artifact explicitly proves the previous stage passed.
+## Start here
+
+### If you run a sales, account or partnerships team
+
+Start with the client-book dashboards. They are what my own book runs on, and the deck builder is the tool I would bring to a first customer meeting. Then the Merck and Pandion model for how I read a deal.
+
+[Client Book dashboards](projects/client-book-dashboards/) · [Live demo](https://fergusirvine55-gif.github.io/fergus-irvine-agentic-ai-portfolio/demo/) · [Merck and Pandion model](merck-pandion-ma-model/) · [How I build with Claude](how-i-build-with-claude.md)
+
+### If you run solutions, deployment or forward-deployed work
+
+Start with the master build and the setup page: how the statistics are implemented, how the exports are engineered around a locked-down desktop, and how I run agents, tests and verification.
+
+[Master build v41](projects/client-book-dashboards/client-book-deck-builder-v41.html) · [Launch pad, all four dashboards](projects/client-book-dashboards/dashboards-hub.html) · [How I build with Claude](how-i-build-with-claude.md) · [Trading pipeline gates](#personal-quant-and-decision-systems)
+
+### If you run product or strategy
+
+Start with the benchmark and explore tabs, then the negative results: a prediction engine that proved there was no edge, and a trading pipeline that killed ten strategies before any reached capital.
+
+[Master build v41](projects/client-book-dashboards/client-book-deck-builder-v41.html) · [Football Predictor](#personal-quant-and-decision-systems) · [algo-trader-v3](#personal-quant-and-decision-systems) · [ETF Investment Simulator](#personal-quant-and-decision-systems)
 
 ## Projects
 
-| Project | What it is | Built with agentic AI | Scale / proof |
+### Financial services and capital markets
+
+Built inside a global bank's securities-finance business, or from public filings.
+
+| Project | What it is | Proof | Links |
 |---|---|---|---|
-| **Client Book Dashboard & Deck Builder** | Single-file HTML tool for a global bank's collateral/exposure reporting workflow. Pure client-side (SheetJS/xlsx.js) — no backend, no data leaves the browser. | Yes | Handles ~100k-row / 70MB spreadsheet extracts, ~49s parse time; 123- and 37-assertion test modules. Live demo included, see **Live version: https://fergusirvine55-gif.github.io/fergus-irvine-agentic-ai-portfolio/demo/**. |
-| **Merck & Co / Pandion Therapeutics Acquisition Model** | Full-scope M&A acquisition model reconstructing Merck's $1.85bn acquisition of Pandion Therapeutics (Feb 2021), built entirely from public filings (SEC, press releases). | Partial — core 17-tab workbook built manually; documentation, deal book and methodology guide AI-assisted. | 17-tab integrated model (rNPV, sum-of-parts, comps, precedents, football field, S&U, ASC 805 PPA, accretion/dilution, pro forma, synergies, sensitivity, scenarios, error checks) — 751 live formulas, zero errors. Includes a 6-slide IB-style deal book and a 5-page methodology guide — see [`/merck-pandion-ma-model`](./merck-pandion-ma-model). |
-| **Trade Advisor** | Personal multi-horizon trade decision-support web app, live on the web. | Yes | 18-agent research workflow (~1.2M tokens) over an 82-source registry; 17-check safety suite; live execution gated behind 8 independent checks, off by default. |
-| **equity-advisor** | Python CLI for equity research and recommendations. | Yes | 115 test functions across 31 files; coverage deliberately driven from 79% to 85% before the live-recommendation gate was allowed to activate. |
-| **algo-trader-v3** | Systematic trading bot as a five-stage gated pipeline: Hypothesis → Signal R&D → Build → Paper/Incubation → Live. | Yes | 129 tests, 28 architecture decision records; a hook-enforced rule blocks stage advancement unless the upstream gate artifact exists and reads PASS. Kill-scoreboard: 10+ candidate trading edges tested and killed before reaching capital. |
-| **Football Predictor** | Soccer match outcome (win/draw/loss) prediction engine. | Yes | 196 tests; RPS 0.2018 on unseen data across 15 leagues / 34,903 matches — genuinely skillful, and the project's own conclusion is that no exploitable edge exists against efficient betting markets. |
-| **ETF Investment Simulator** | Offline Monte Carlo investment simulator built for a friend, comparing 36 funds across UK brokers. | Yes | 100,000 simulation paths in a browser Web Worker, no server; built-in warnings against survivorship and recency bias in the underlying assumptions. |
+| Client Book dashboards | Four single-file browser dashboards for a securities-finance client book: the master Client Book Dashboard & Deck Builder, its client-facing release, an EMEA aged-receivables tracker and a no-install exposure explorer. No server, no install, no network call. Every byte of parsing, charting, statistics and PDF or PPTX export runs inside the browser on a locked-down bank desktop. | Three releases deployed globally and in monthly use by dozens of relationship managers and client-service staff. Master build v41 scores a client against peers on 13 similarity factors, answers five analyst questions on an explore surface, runs paired t-tests, an F-test and Granger-style lead-lag tests with Benjamini-Hochberg adjustment, and exports decks into the user's own PPTX template. Every demo figure was recomputed in Python and matched in the browser to the cent. | [Project page](projects/client-book-dashboards/) · [Launch pad](projects/client-book-dashboards/dashboards-hub.html) · [Live demo](https://fergusirvine55-gif.github.io/fergus-irvine-agentic-ai-portfolio/demo/) · [Master build v41](projects/client-book-dashboards/client-book-deck-builder-v41.html) |
+| Merck & Co / Pandion Therapeutics acquisition model | A full M&A model of Merck's $1.85bn acquisition of Pandion Therapeutics, rebuilt from SEC filings and press releases: rNPV, sum of parts, comparables, precedents, football field, sources and uses, ASC 805 purchase price allocation, accretion and dilution, pro forma, synergies, sensitivities and scenarios. | 17 integrated tabs, 751 live formulas, zero errors, plus a six-slide deal book and a five-page methodology guide. The workbook was built by hand; the documents were AI-assisted. Public information only, not investment advice, not affiliated with either company. | [Folder](merck-pandion-ma-model/) · [Workbook](merck-pandion-ma-model/Merck_Pandion_Acquisition_Model.xlsx) · [Deal book](merck-pandion-ma-model/Deal_Book.pptx) · [Methodology guide](merck-pandion-ma-model/Methodology_and_User_Guide.pdf) |
 
-## Live demo
+### Personal quant and decision systems
 
-See [`/demo`](./demo) for a working version of the Client Book Dashboard & Deck Builder with synthetic sample data — no real data of any kind. Click "Load Demo Data" to populate it instantly.
+Built for myself and for friends, with test suites and the results they produced, flattering or not. The code is being prepared for publication after a secrets scan; the figures are from the suites as they stand.
 
-**Live version: https://fergusirvine55-gif.github.io/fergus-irvine-agentic-ai-portfolio/demo/**
+| Project | What it is | Proof | Links |
+|---|---|---|---|
+| Trade Advisor | Personal multi-horizon trade decision-support web app: intraday to multi-year horizons, each with its own evidence base, a recommendation contract with entry, stop, target and invalidation, and outcome tracking that scores every call it makes. | 18-agent research workflow (about 1.2M tokens) over an 82-source registry; a 17-check safety suite; live execution gated behind 8 independent checks and off by default. Paper first, fail closed. | Code in preparation |
+| equity-advisor | Python CLI for equity research and recommendations, reused as the valuation engine inside Trade Advisor. | 115 test functions across 31 files; coverage pushed from 79% to 85% before the live-recommendation gate was allowed to switch on. | Code in preparation |
+| algo-trader-v3 | Systematic trading pipeline in five gated stages: hypothesis, signal research, build, paper incubation, live. | 129 tests and 28 architecture decision records. A hook blocks a stage from advancing unless the previous gate's artefact exists on disk and reads PASS. Kill scoreboard: more than ten candidate edges tested and killed before any reached capital. | Code in preparation |
+| Football Predictor | Match-outcome (win, draw, loss) prediction engine. | 196 tests. Ranked probability score 0.2018 on unseen data across 15 leagues and 34,903 matches: a skilful model, and its own conclusion is that no exploitable edge exists against the betting market. | Code in preparation |
+| ETF Investment Simulator | Offline Monte Carlo investment simulator built for a friend, comparing 36 funds across UK brokers. | 100,000 simulation paths in a browser Web Worker with no server, and warnings about survivorship and recency bias written into the assumptions page. | Code in preparation |
 
-## Merck & Co / Pandion Therapeutics deal documents
+### In preparation
 
-See [`/merck-pandion-ma-model`](./merck-pandion-ma-model) for the full package: [acquisition model workbook](./merck-pandion-ma-model/Merck_Pandion_Acquisition_Model.xlsx), [IB-style deal book](./merck-pandion-ma-model/Deal_Book.pptx), [methodology & user guide](./merck-pandion-ma-model/Methodology_and_User_Guide.pdf), and [license](./merck-pandion-ma-model/README_and_License.pdf). Reconstructed entirely from public information (SEC filings, press releases) — not investment advice, not affiliated with either company.
+Sanitised versions of work from this autumn, each landing as its own page.
+
+- AI for ship operators: a feasibility study from a 51-agent research run, with its method and sources.
+- A command-and-control AI layer for passenger ships: concept note and the gated method behind it.
+- Records-first prospecting: the method and scoring rubric behind a prospect pack built from public carrier records.
+- Enterprise account plan: a template drawn from a private-credit account plan, with the firm removed.
+- Meeting-prep workspace: question bank, flashcards, side-by-side documents and notes, demonstrated on a fictional company.
+- Target-account research pipeline: API ingest, a classifier, embedding-similarity tiers and a live dashboard, on synthetic data.
+
+## How I build with Claude
+
+- A Contabo VPS (12 vCPU, 47 GB RAM) runs headless Claude Code for agent fleets. The Mac stays master; cloud sessions take the overnight research.
+- A hook enforces a launch card before any agent run: three configurations, every model and effort level chosen fresh, usage share and finishing time stated. Nothing launches until I type go.
+- Finders write to disk, an independent verifier re-checks their claims, one judge decides. Briefs are files with an output schema.
+- Suites of 196, 129 and 115 tests; hook-enforced stage gates; a kill scoreboard; pre-registration and held-out controls on the models.
+- Single-file HTML tools for bank desktops, Python pipelines, React and Express on Render, artifacts with shared databases and per-user state.
+- One branch per task, draft PRs with a stated merge order, decision ids and version tags, HANDOVER and STATE files in every project.
+
+The full page, with the environments, the governance layer, the agent patterns, the tests and the terminal: [How I build with Claude](how-i-build-with-claude.md).
 
 ## What this proves
 
-- Quantitative rigor isn't theoretical — deal mathematics and multi-agent research pipelines are the same discipline applied to different domains.
-- Agentic AI fluency here means shipped, tested systems with governance built into the tooling (hooks, gates, kill-scoreboards) — not prompting as a party trick.
-- Honest reporting of negative results (Football Predictor) matters as much as positive ones — the value is in the process being trustworthy, not in every project "winning."
-- Enterprise relationship experience plus hands-on technical build capability is an uncommon combination: someone who can sit in front of a client and also ship the system underneath the conversation.
+- Deal mathematics and multi-agent research pipelines are the same discipline: state the claim, build the test, report the number.
+- The agent work here is shipped systems with governance in the tooling: launch cards, hooks, gates, allow-lists and kill scoreboards.
+- Negative results get the same care as positive ones. The prediction engine that found no edge is the project I would show first.
+- I can sit in front of the client and also ship the system underneath the conversation.
+
+---
+
+Index v2, updated 4 Nov 2026. Generated from [`portfolio.json`](portfolio.json) by [`build/build_portfolio.py`](build/build_portfolio.py); the [site](https://fergusirvine55-gif.github.io/fergus-irvine-agentic-ai-portfolio/) is built from the same file.
